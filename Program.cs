@@ -50,6 +50,20 @@ public static class Logic
         PrintNewLine();
     }
 
+    private static void RunPrimeNumbers()
+    {
+        var primeNumbers = new PrimeNumbers();
+        var counter = 0;
+
+        do
+        {
+            var current = primeNumbers.Current;
+            Console.Write($"{current}, ");
+        } while (++counter < 10 && primeNumbers.MoveNext());
+
+        primeNumbers.Reset();
+    }
+
     public static void Run()
     {
         RunFibonacci();
@@ -57,6 +71,8 @@ public static class Logic
 
         RunMatrix();
         PrintNewLine();
+
+        RunPrimeNumbers();
     }
 }
 
