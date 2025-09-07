@@ -19,9 +19,43 @@ public static class Logic
         }
     }
 
+    private static void RunMatrix()
+    {
+        var matrix = new Matrix(3, 4);
+        Console.WriteLine("full matrix:");
+        Console.WriteLine(matrix);
+
+        Console.WriteLine("row 2:");
+        foreach (var num in matrix.GetRow(2))
+        {
+            Console.Write($"{num:F3} ");
+        }
+
+        PrintNewLine();
+
+        Console.WriteLine("col 0:");
+        foreach (var num in matrix.GetColumn(0))
+        {
+            Console.Write($"{num:F3} ");
+        }
+
+        PrintNewLine();
+
+        Console.WriteLine("col 1:");
+        foreach (var num in matrix.GetColumn(1))
+        {
+            Console.Write($"{num:F3} ");
+        }
+
+        PrintNewLine();
+    }
+
     public static void Run()
     {
         RunFibonacci();
+        PrintNewLine();
+
+        RunMatrix();
         PrintNewLine();
     }
 }
